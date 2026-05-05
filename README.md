@@ -1,4 +1,4 @@
-# <center>ESP32-Smart Blind Stick</center>
+# <div align="center"> ESP32-Smart Blind Stick </div>
 
 **The Smart Blind Stick** is a prototype hybrid mobility aid based on the **Internet of Things (IoT)** designed to enhance the independence and safety of visually impaired individuals in both indoor and outdoor environments. This device combines real-time spatial obstacle detection technology with a smart location tracking system, providing maximum protection for users and peace of mind for their families.
 
