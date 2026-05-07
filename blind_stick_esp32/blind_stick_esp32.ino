@@ -101,7 +101,7 @@ void handleAlerts(long distance) {
   else if (distance <= 80 && distance > 50) {
     // ---- EARLY WARNING ----
     analogWrite(vibrationPin, 100); // Low vibration (PWM: 0-255)
-    buzzerInterval = 500;           // Slow tempo (every 500ms)
+    buzzerInterval = map(jarak, 51, 80, 50, 600);           // Slow tempo (every 500ms)
   } 
   else if (distance <= 50) {
     // ---- DANGER CONDITION ----
@@ -133,7 +133,7 @@ void sendTelegramUpdate() {
     if (WiFi.status() == WL_CONNECTED) {
       // Ensure GPS has a valid satellite fix
       if (gps.location.isValid()) {
-        String message = "📍 Location Update (15-Min Interval):\n";
+        String message = "📍 Location Update (10-Min Interval):\n";
         message += "The Smart Stick user is currently at:\n";
         message += "https://maps.google.com/?q=";
         message += String(gps.location.lat(), 6) + ",";
